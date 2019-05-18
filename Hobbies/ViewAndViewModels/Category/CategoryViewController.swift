@@ -23,15 +23,16 @@ class CategoryViewController: UIViewController
     {
         super.viewDidLoad()
         self.title = "Category"
-        self.registerNibs()
+        self.prepareTableView()
         self.setupTableViewBinding()
         self.setupBinding()
         self.viewModel.requestCategories()
     }
     
-    private func registerNibs() 
+    private func prepareTableView()
     {
         CategoryTableViewCell.registerSelf(inTableView: self.tableView)
+        self.removeTableViewExtraEmptyCells(tableView: self.tableView)
     }
     
     private func setupBinding ()

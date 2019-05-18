@@ -41,4 +41,12 @@ extension UIViewController: LoadingView
 {
 }
 
+extension UIViewController
+{
+    func removeTableViewExtraEmptyCells(tableView: UITableView)
+    {
+        tableView.tableFooterView = UIView(frame: .zero)
+    }
+}
+
 

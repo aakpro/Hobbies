@@ -167,13 +167,6 @@
 			path = ViewAndViewModels;
 			sourceTree = "<group>";
 		};
-		A243619322904D650068CD0A /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Helpers;
-			sourceTree = "<group>";
-		};
 		A24361962290501D0068CD0A /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,7 +219,6 @@
 				A243617F228FE55D0068CD0A /* Models */,
 				A243617C228FE38B0068CD0A /* Networking */,
 				A277CB07228FDB9700603E80 /* SupportingFiles */,
-				A243619322904D650068CD0A /* Helpers */,
 			);
 			path = Hobbies;
 			sourceTree = "<group>";

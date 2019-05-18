@@ -20,11 +20,18 @@ public class CategoryServices: BaseNetworkingServices
         self.request(endpoint: endpoints.categories.rawValue, method: .get) { [weak self] (result) in
             switch result{
             case .success(let cateogryObjects):
-                guard let categories = self?.convert(categoryObjects: cateogryObjects) else {
-                    completionHandler(nil, AppError.createNetworkingError(WithType: .jsonParsing))
+                
+                if let categoryArray = cateogryObjects as? Array<Dictionary<String, Any>> {
+                    var categories = Array<CategoryModel>()
+                    for categoryObject in categoryArray {
+                        if let newCategory = CategoryModel(JSON: categoryObject) {
+                            categories.append(newCategory)
+                        }
+                    }
+                    completionHandler(categories, nil)
                     return
                 }
-                completionHandler(categories, nil)
+                completionHandler(nil, AppError.createNetworkingError(WithType: .jsonParsing))
                 return
             case .failure(let error):
                 completionHandler(nil, error as? AppError)
