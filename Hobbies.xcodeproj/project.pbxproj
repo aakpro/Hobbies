@@ -99,13 +99,8 @@
 		A277CAD6228FDADD00603E80 /* Hobbies */ = {
 			isa = PBXGroup;
 			children = (
-				A277CAD7228FDADD00603E80 /* AppDelegate.swift */,
-				A277CAD9228FDADD00603E80 /* MasterViewController.swift */,
-				A277CADB228FDADD00603E80 /* DetailViewController.swift */,
-				A277CADD228FDADD00603E80 /* Main.storyboard */,
-				A277CAE0228FDAE000603E80 /* Assets.xcassets */,
-				A277CAE2228FDAE000603E80 /* LaunchScreen.storyboard */,
-				A277CAE5228FDAE000603E80 /* Info.plist */,
+				A277CB07228FDB9700603E80 /* SupportingFiles */,
+				A277CB08228FDBC900603E80 /* ViewControllers */,
 			);
 			path = Hobbies;
 			sourceTree = "<group>";
@@ -126,6 +121,27 @@
 				A277CAFB228FDAE100603E80 /* Info.plist */,
 			);
 			path = HobbiesUITests;
+			sourceTree = "<group>";
+		};
+		A277CB07228FDB9700603E80 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				A277CAD7228FDADD00603E80 /* AppDelegate.swift */,
+				A277CADD228FDADD00603E80 /* Main.storyboard */,
+				A277CAE0228FDAE000603E80 /* Assets.xcassets */,
+				A277CAE2228FDAE000603E80 /* LaunchScreen.storyboard */,
+				A277CAE5228FDAE000603E80 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		A277CB08228FDBC900603E80 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A277CAD9228FDADD00603E80 /* MasterViewController.swift */,
+				A277CADB228FDADD00603E80 /* DetailViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,7 +454,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = Hobbies/Info.plist;
+				INFOPLIST_FILE = Hobbies/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,7 +472,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = Hobbies/Info.plist;
+				INFOPLIST_FILE = Hobbies/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
