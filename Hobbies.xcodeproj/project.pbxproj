@@ -10,13 +10,13 @@
 		A243617E228FE3AE0068CD0A /* BaseNetworkingServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A243617D228FE3AE0068CD0A /* BaseNetworkingServices.swift */; };
 		A2436181228FE56D0068CD0A /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2436180228FE56D0068CD0A /* BaseModel.swift */; };
 		A2436183228FE5B50068CD0A /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2436182228FE5B50068CD0A /* AppError.swift */; };
+		A24361852290329A0068CD0A /* CategoryServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24361842290329A0068CD0A /* CategoryServices.swift */; };
+		A24361872290331A0068CD0A /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24361862290331A0068CD0A /* CategoryModel.swift */; };
+		A2436189229038730068CD0A /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2436188229038730068CD0A /* NetworkingTests.swift */; };
 		A277CAD8228FDADD00603E80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A277CAD7228FDADD00603E80 /* AppDelegate.swift */; };
-		A277CADA228FDADD00603E80 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A277CAD9228FDADD00603E80 /* MasterViewController.swift */; };
-		A277CADC228FDADD00603E80 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A277CADB228FDADD00603E80 /* DetailViewController.swift */; };
 		A277CADF228FDADD00603E80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A277CADD228FDADD00603E80 /* Main.storyboard */; };
 		A277CAE1228FDAE000603E80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A277CAE0228FDAE000603E80 /* Assets.xcassets */; };
 		A277CAE4228FDAE000603E80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A277CAE2228FDAE000603E80 /* LaunchScreen.storyboard */; };
-		A277CAEF228FDAE000603E80 /* HobbiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A277CAEE228FDAE000603E80 /* HobbiesTests.swift */; };
 		A277CAFA228FDAE000603E80 /* HobbiesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A277CAF9228FDAE000603E80 /* HobbiesUITests.swift */; };
 		ADA4980A59D4A6C0F4D1BC49 /* Pods_HobbiesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC49A8FCECA4FE778C19D99F /* Pods_HobbiesUITests.framework */; };
 		D2D14C05A27784690AB3E56B /* Pods_HobbiesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 353FEBB552D94B86CE2B597B /* Pods_HobbiesTests.framework */; };
@@ -49,16 +49,16 @@
 		A243617D228FE3AE0068CD0A /* BaseNetworkingServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkingServices.swift; sourceTree = "<group>"; };
 		A2436180228FE56D0068CD0A /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		A2436182228FE5B50068CD0A /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		A24361842290329A0068CD0A /* CategoryServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryServices.swift; sourceTree = "<group>"; };
+		A24361862290331A0068CD0A /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		A2436188229038730068CD0A /* NetworkingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
 		A277CAD4228FDADD00603E80 /* Hobbies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hobbies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A277CAD7228FDADD00603E80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A277CAD9228FDADD00603E80 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		A277CADB228FDADD00603E80 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		A277CADE228FDADD00603E80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A277CAE0228FDAE000603E80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A277CAE3228FDAE000603E80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A277CAE5228FDAE000603E80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A277CAEA228FDAE000603E80 /* HobbiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HobbiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A277CAEE228FDAE000603E80 /* HobbiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbiesTests.swift; sourceTree = "<group>"; };
 		A277CAF0228FDAE000603E80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A277CAF5228FDAE000603E80 /* HobbiesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HobbiesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A277CAF9228FDAE000603E80 /* HobbiesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbiesUITests.swift; sourceTree = "<group>"; };
@@ -124,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				A243617D228FE3AE0068CD0A /* BaseNetworkingServices.swift */,
+				A24361842290329A0068CD0A /* CategoryServices.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -133,6 +134,7 @@
 			children = (
 				A2436180228FE56D0068CD0A /* BaseModel.swift */,
 				A2436182228FE5B50068CD0A /* AppError.swift */,
+				A24361862290331A0068CD0A /* CategoryModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -164,8 +166,8 @@
 			children = (
 				A243617F228FE55D0068CD0A /* Models */,
 				A243617C228FE38B0068CD0A /* Networking */,
-				A277CB07228FDB9700603E80 /* SupportingFiles */,
 				A277CB08228FDBC900603E80 /* ViewControllers */,
+				A277CB07228FDB9700603E80 /* SupportingFiles */,
 			);
 			path = Hobbies;
 			sourceTree = "<group>";
@@ -173,7 +175,7 @@
 		A277CAED228FDAE000603E80 /* HobbiesTests */ = {
 			isa = PBXGroup;
 			children = (
-				A277CAEE228FDAE000603E80 /* HobbiesTests.swift */,
+				A2436188229038730068CD0A /* NetworkingTests.swift */,
 				A277CAF0228FDAE000603E80 /* Info.plist */,
 			);
 			path = HobbiesTests;
@@ -203,8 +205,6 @@
 		A277CB08228FDBC900603E80 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				A277CAD9228FDADD00603E80 /* MasterViewController.swift */,
-				A277CADB228FDADD00603E80 /* DetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -286,6 +286,7 @@
 					};
 					A277CAE9228FDAE000603E80 = {
 						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
 						TestTargetID = A277CAD3228FDADD00603E80;
 					};
 					A277CAF4228FDAE000603E80 = {
@@ -493,8 +494,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A277CADC228FDADD00603E80 /* DetailViewController.swift in Sources */,
-				A277CADA228FDADD00603E80 /* MasterViewController.swift in Sources */,
+				A24361852290329A0068CD0A /* CategoryServices.swift in Sources */,
+				A24361872290331A0068CD0A /* CategoryModel.swift in Sources */,
 				A2436183228FE5B50068CD0A /* AppError.swift in Sources */,
 				A243617E228FE3AE0068CD0A /* BaseNetworkingServices.swift in Sources */,
 				A277CAD8228FDADD00603E80 /* AppDelegate.swift in Sources */,
@@ -506,7 +507,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A277CAEF228FDAE000603E80 /* HobbiesTests.swift in Sources */,
+				A2436189229038730068CD0A /* NetworkingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,6 +714,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HobbiesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -722,6 +724,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.companyA.HobbiesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hobbies.app/Hobbies";
@@ -734,6 +737,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HobbiesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

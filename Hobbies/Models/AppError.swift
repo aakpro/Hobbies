@@ -12,13 +12,13 @@ public enum NetworkingErrorTypes: Int
 {
     case unknown
     case jsonParsing
-    case cloudinaryError
-    case tooManyRequests = 429
-    case unprocessableEntity = 422
+    case redirection
+    case client
+    case server
 }
 
 
-public class AppError: BaseModel, Error
+public class AppError: BaseModel
 {
     public var networkingErrorType: NetworkingErrorTypes?
     public var statusCode: Int?
@@ -46,4 +46,9 @@ extension AppError
         }
         return error!
     }
+}
+
+extension AppError: Error
+{
+    
 }
