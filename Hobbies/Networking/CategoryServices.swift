@@ -20,7 +20,7 @@ public class CategoryServices: BaseNetworkingServices
         self.request(endpoint: endpoints.categories.rawValue, method: .get) { [weak self] (result) in
             switch result{
             case .success(let cateogryObjects):
-                guard let categories:Array<CategoryModel> = self?.convert(categoryObjects: cateogryObjects) else {
+                guard let categories = self?.convert(categoryObjects: cateogryObjects) else {
                     completionHandler(nil, AppError.createNetworkingError(WithType: .jsonParsing))
                     return
                 }
