@@ -9,7 +9,14 @@
 
 import ObjectMapper
 
-class BusinessHourModel: BaseModel
-{
-
+enum BusinessDays: String {
+    case sun = "sunday"
+    case monday = "monday"
 }
+
+enum BusinessHourTypes: String {
+    case to = "to"
+    case from = "from"
+}
+
+typealias BusinessHourModel = [String:[String:String]]

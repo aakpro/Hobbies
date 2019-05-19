@@ -8,12 +8,11 @@
 
 import ObjectMapper
 
-enum contactInfoTypes: String
+enum ContactInfoTypes: String
 {
     case website = "website"
+    case email = "email"
+    case phoneNumber = "phoneNumber"
 }
 
-class ContactInfoModel: BaseModel
-{
-
-}
+typealias ContactInfoModel = Dictionary<String,Array<String>>

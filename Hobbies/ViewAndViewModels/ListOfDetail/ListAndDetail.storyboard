@@ -34,7 +34,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="u2v-4Q-SSt" id="bXf-av-OfN"/>
-                        <segue destination="WhW-hd-wzx" kind="show" id="Z4V-uY-9aB"/>
+                        <segue destination="WhW-hd-wzx" kind="show" identifier="listToDetail" id="Z4V-uY-9aB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Vh-1H-THX" userLabel="First Responder" sceneMemberID="firstResponder"/>

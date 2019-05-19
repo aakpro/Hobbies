@@ -14,8 +14,8 @@ class RestaurantModel: BaseModel, ListModelProtocol, ListDetailModelProtocol
     //MARK: - ListDetailModelProtocol
     var photo: String?
     var addresses: [AddressModel]?
-    var businessHours: [BusinessHourModel]?
-    var contactInfo: [ContactInfoModel]?
+    var businessHours: BusinessHourModel?
+    var contactInfo: ContactInfoModel?
     
     //MARK: - ListModelProtocol
     var id: String?

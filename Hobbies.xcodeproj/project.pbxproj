@@ -39,6 +39,8 @@
 		A24361C12291AEE20068CD0A /* ContactInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24361C02291AEE20068CD0A /* ContactInfoModel.swift */; };
 		A24361C62291B3B90068CD0A /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A24361C52291B3B90068CD0A /* Detail.storyboard */; };
 		A24361C82291B3DA0068CD0A /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24361C72291B3DA0068CD0A /* DetailViewModel.swift */; };
+		A24361CC2291C35B0068CD0A /* TitleAndDescTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24361CA2291C35B0068CD0A /* TitleAndDescTableViewCell.swift */; };
+		A24361CD2291C35B0068CD0A /* TitleAndDescTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A24361CB2291C35B0068CD0A /* TitleAndDescTableViewCell.xib */; };
 		A277CAD8228FDADD00603E80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A277CAD7228FDADD00603E80 /* AppDelegate.swift */; };
 		A277CAE1228FDAE000603E80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A277CAE0228FDAE000603E80 /* Assets.xcassets */; };
 		A277CAE4228FDAE000603E80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A277CAE2228FDAE000603E80 /* LaunchScreen.storyboard */; };
@@ -103,6 +105,8 @@
 		A24361C02291AEE20068CD0A /* ContactInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoModel.swift; sourceTree = "<group>"; };
 		A24361C52291B3B90068CD0A /* Detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Detail.storyboard; path = Hobbies/ViewAndViewModels/Detail/Detail.storyboard; sourceTree = SOURCE_ROOT; };
 		A24361C72291B3DA0068CD0A /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		A24361CA2291C35B0068CD0A /* TitleAndDescTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleAndDescTableViewCell.swift; sourceTree = "<group>"; };
+		A24361CB2291C35B0068CD0A /* TitleAndDescTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleAndDescTableViewCell.xib; sourceTree = "<group>"; };
 		A277CAD4228FDADD00603E80 /* Hobbies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hobbies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A277CAD7228FDADD00603E80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A277CAE0228FDAE000603E80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -244,11 +248,21 @@
 		A24361C22291B37C0068CD0A /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				A24361C92291C3450068CD0A /* Views */,
 				A24361C52291B3B90068CD0A /* Detail.storyboard */,
 				A24361B222918B340068CD0A /* DetailViewController.swift */,
 				A24361C72291B3DA0068CD0A /* DetailViewModel.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		A24361C92291C3450068CD0A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A24361CA2291C35B0068CD0A /* TitleAndDescTableViewCell.swift */,
+				A24361CB2291C35B0068CD0A /* TitleAndDescTableViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		A277CACB228FDADD00603E80 = {
@@ -437,6 +451,7 @@
 			files = (
 				A24361902290456D0068CD0A /* Category.storyboard in Resources */,
 				A277CAE4228FDAE000603E80 /* LaunchScreen.storyboard in Resources */,
+				A24361CD2291C35B0068CD0A /* TitleAndDescTableViewCell.xib in Resources */,
 				A277CAE1228FDAE000603E80 /* Assets.xcassets in Resources */,
 				A24361AF22918A7D0068CD0A /* ListAndDetail.storyboard in Resources */,
 				A243619A229050380068CD0A /* ListModelTableViewCell.xib in Resources */,
@@ -488,6 +503,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Hobbies/Pods-Hobbies-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -498,6 +514,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -536,6 +553,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-HobbiesUITests/Pods-HobbiesUITests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -546,6 +564,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -584,6 +603,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-HobbiesTests/Pods-HobbiesTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -594,6 +614,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -619,6 +640,7 @@
 				A243619222904D620068CD0A /* MessageUtility.swift in Sources */,
 				A24361A1229059770068CD0A /* ViewControllerExtension.swift in Sources */,
 				A24361A8229185BB0068CD0A /* VacationModel.swift in Sources */,
+				A24361CC2291C35B0068CD0A /* TitleAndDescTableViewCell.swift in Sources */,
 				A243618B2290437D0068CD0A /* CategoryViewModel.swift in Sources */,
 				A24361BF2291AE7B0068CD0A /* BusinessHourModel.swift in Sources */,
 				A24361B322918B340068CD0A /* DetailViewController.swift in Sources */,

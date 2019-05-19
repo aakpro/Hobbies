@@ -38,7 +38,7 @@ struct DetailToListModel
     
     struct ContactInformation
     {
-        let items: [ContactInfoModel]
+        let items: ContactInfoModel
     }
     
     struct Addresses
@@ -48,7 +48,7 @@ struct DetailToListModel
     
     struct BusinessHours
     {
-        let items: [BusinessHourModel]
+        let items: BusinessHourModel
     }
     
     var sections: [Section]
@@ -65,9 +65,14 @@ struct DetailToListModel
 
 class DetailViewModel: NSObject
 {
+    init(viewController: DetailViewController) {
+        self.viewController = viewController
+    }
+    var viewController: DetailViewController
     var detailObject: ListDetailModelProtocol! {
         didSet {
-            
+            self.detailToListModel = self.createDetailArray(detailModelProtocol: self.detailObject)
+            self.viewController.tableView?.reloadData()
         }
     }
     var detailToListModel = DetailToListModel.empty
