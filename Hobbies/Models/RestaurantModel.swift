@@ -8,8 +8,14 @@
 
 import ObjectMapper
 
-class RestaurantModel: BaseModel
+class RestaurantModel: BaseModel, ListModelProtocol
 {
+    var type: HobbiesTypes? {
+        get {
+            return .restaurants
+        }
+    }
+    
     var id: String?
     var updatedAt: Date?
     var title: String?

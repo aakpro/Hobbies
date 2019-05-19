@@ -11,11 +11,12 @@ enum HobbiesTypes: String
 {
     case restaurants = "restaurants.json"
     case vacations = "vacation-spot.json"
+    case categories = "categories.json"
 }
 internal class DetailServices: BaseNetworkingServices
 {
     //results can be either an array of ResturantModel or VacationModel
-    func getAListOf(_ hobbieType: HobbiesTypes,completionHandler: @escaping (_ result: Array<BaseModel>?, _ error:AppError?) -> Void)
+    func getAListOf(_ hobbieType: HobbiesTypes,completionHandler: @escaping (_ result: Array<ListModelProtocol>?, _ error:AppError?) -> Void)
     {
         
         self.request(endpoint: hobbieType.rawValue, method: .get) { (result) in
@@ -46,6 +47,7 @@ internal class DetailServices: BaseNetworkingServices
                         completionHandler(vacations, nil)
                         return
                     }
+                default: break
                 }
                 
                 completionHandler(nil, AppError.createNetworkingError(WithType: .jsonParsing))

@@ -8,7 +8,14 @@
 
 import ObjectMapper
 
-class VacationModel: BaseModel {
+class VacationModel: BaseModel, ListModelProtocol
+{
+    var type: HobbiesTypes? {
+        get {
+            return .vacations
+        }
+    }
+    
     var id: String?
     var updatedAt: Date?
     var title: String?

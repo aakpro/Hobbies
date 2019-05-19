@@ -8,9 +8,18 @@
 
 import ObjectMapper
 
-public class CategoryModel: BaseModel
+public class CategoryModel: BaseModel, ListModelProtocol
 {
+    var type: HobbiesTypes? {
+        get {
+            if self.slug == "restaurants" { return .restaurants }
+            if self.slug == "vacation-spots" { return .vacations }
+            return .categories
+        }
+    }
+    
     var id: String?
+    var slug: String?
     var updatedAt: Date?
     var title: String?
     var description: String?
@@ -31,6 +40,7 @@ public class CategoryModel: BaseModel
         updatedAt          <- (map["updated_at"], CustomDateFormatTransform(formatString: "yyyy-MM-dd'T'HH:mm:ss.SSSXXXXX"))
         description        <- map["description"]
         active             <- map["_active"]
+        slug               <- map["slug"]
         createdAt          <- (map["created_at"], CustomDateFormatTransform(formatString: "yyyy-MM-dd'T'HH:mm:ss.SSSXXXXX"))
     }
 }
