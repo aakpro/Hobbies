@@ -24,6 +24,9 @@
 		A243619E229054000068CD0A /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A243619D229054000068CD0A /* DateExtension.swift */; };
 		A24361A1229059770068CD0A /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24361A0229059770068CD0A /* ViewControllerExtension.swift */; };
 		A24361A3229059D70068CD0A /* LoadingUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24361A2229059D70068CD0A /* LoadingUtility.swift */; };
+		A24361A6229183760068CD0A /* DetailServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24361A5229183760068CD0A /* DetailServices.swift */; };
+		A24361A8229185BB0068CD0A /* VacationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24361A7229185BB0068CD0A /* VacationModel.swift */; };
+		A24361AA229185DE0068CD0A /* RestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24361A9229185DE0068CD0A /* RestaurantModel.swift */; };
 		A277CAD8228FDADD00603E80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A277CAD7228FDADD00603E80 /* AppDelegate.swift */; };
 		A277CAE1228FDAE000603E80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A277CAE0228FDAE000603E80 /* Assets.xcassets */; };
 		A277CAE4228FDAE000603E80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A277CAE2228FDAE000603E80 /* LaunchScreen.storyboard */; };
@@ -73,6 +76,9 @@
 		A243619D229054000068CD0A /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		A24361A0229059770068CD0A /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		A24361A2229059D70068CD0A /* LoadingUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingUtility.swift; sourceTree = "<group>"; };
+		A24361A5229183760068CD0A /* DetailServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailServices.swift; sourceTree = "<group>"; };
+		A24361A7229185BB0068CD0A /* VacationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationModel.swift; sourceTree = "<group>"; };
+		A24361A9229185DE0068CD0A /* RestaurantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantModel.swift; sourceTree = "<group>"; };
 		A277CAD4228FDADD00603E80 /* Hobbies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hobbies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A277CAD7228FDADD00603E80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A277CAE0228FDAE000603E80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -145,6 +151,7 @@
 			children = (
 				A243617D228FE3AE0068CD0A /* BaseNetworkingServices.swift */,
 				A24361842290329A0068CD0A /* CategoryServices.swift */,
+				A24361A5229183760068CD0A /* DetailServices.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -155,6 +162,8 @@
 				A2436180228FE56D0068CD0A /* BaseModel.swift */,
 				A2436182228FE5B50068CD0A /* AppError.swift */,
 				A24361862290331A0068CD0A /* CategoryModel.swift */,
+				A24361A7229185BB0068CD0A /* VacationModel.swift */,
+				A24361A9229185DE0068CD0A /* RestaurantModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -552,11 +561,14 @@
 				A243619E229054000068CD0A /* DateExtension.swift in Sources */,
 				A243619222904D620068CD0A /* MessageUtility.swift in Sources */,
 				A24361A1229059770068CD0A /* ViewControllerExtension.swift in Sources */,
+				A24361A8229185BB0068CD0A /* VacationModel.swift in Sources */,
 				A243618B2290437D0068CD0A /* CategoryViewModel.swift in Sources */,
 				A243619522904E730068CD0A /* AppUtility.swift in Sources */,
 				A24361852290329A0068CD0A /* CategoryServices.swift in Sources */,
+				A24361A6229183760068CD0A /* DetailServices.swift in Sources */,
 				A24361872290331A0068CD0A /* CategoryModel.swift in Sources */,
 				A2436183228FE5B50068CD0A /* AppError.swift in Sources */,
+				A24361AA229185DE0068CD0A /* RestaurantModel.swift in Sources */,
 				A2436199229050380068CD0A /* CategoryTableViewCell.swift in Sources */,
 				A243618D229043990068CD0A /* CategoryViewController.swift in Sources */,
 				A243617E228FE3AE0068CD0A /* BaseNetworkingServices.swift in Sources */,
