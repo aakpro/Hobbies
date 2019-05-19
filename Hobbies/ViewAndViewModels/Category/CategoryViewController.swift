@@ -9,7 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
-
+// rx sample 
 class CategoryViewController: UIViewController
 {
     
@@ -18,7 +18,6 @@ class CategoryViewController: UIViewController
     private let categories : PublishSubject<[CategoryModel]> = PublishSubject()
     private var viewModel = CategoryViewModel()
 
-    public var tracks = PublishSubject<[CategoryModel]>()
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -31,7 +30,7 @@ class CategoryViewController: UIViewController
     
     private func prepareTableView()
     {
-        CategoryTableViewCell.registerSelf(inTableView: self.tableView)
+        ListModelTableViewCell.registerSelf(inTableView: self.tableView)
         self.removeTableViewExtraEmptyCells(tableView: self.tableView)
     }
     
@@ -59,8 +58,9 @@ class CategoryViewController: UIViewController
     private func setupTableViewBinding()
     {
         //binding cateogries to table view
-        categories.bind(to: tableView.rx.items(cellIdentifier: CategoryTableViewCell.reusableIdentifier, cellType: CategoryTableViewCell.self)) {  (row, category, cell) in
-            cell.category = category
+        
+        categories.bind(to: tableView.rx.items(cellIdentifier: ListModelTableViewCell.reusableIdentifier, cellType: ListModelTableViewCell.self)) {  (row, category, cell) in
+            cell.listModel = category
             }.disposed(by: disposeBag)
         
         
@@ -75,6 +75,26 @@ class CategoryViewController: UIViewController
                     cell.layer.transform = CATransform3DIdentity
                 }, completion: nil)
             })).disposed(by: disposeBag)
+        
+        tableView.rx.modelSelected(CategoryModel.self).subscribe(onNext: { (category) in
+            self.performSegue(withIdentifier: AppConstants.segueIds.categoryToList, sender: category)
+        }).disposed(by: disposeBag)
+        
+        tableView.rx.itemSelected
+            .subscribe(onNext: { [weak self] indexPath in
+                self?.tableView.deselectRow(at: indexPath, animated: true)
+            }).disposed(by: disposeBag)
+
+    }
+    //MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if let viewController = segue.destination as? ListViewController,
+            let category = sender as? CategoryModel {
+            viewController.category = category
+            viewController.hobbieType = category.type
+        }
+        
     }
 
 }

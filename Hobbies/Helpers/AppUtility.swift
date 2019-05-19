@@ -31,6 +31,14 @@ class AppUtility: NSObject {
     public static func getCurrentViewController() -> UIViewController? {
         return UIApplication.topViewController()
     }
+    
+    public static func instantiateViewController(withViewControllerName viewControllerName: String? = nil, fromStoryboard storyboardName: String) -> UIViewController?
+    {
+        guard let vcName = viewControllerName else {
+            return UIStoryboard(name: storyboardName, bundle: nil).instantiateInitialViewController()
+        }
+        return UIStoryboard(name: storyboardName, bundle: nil).instantiateViewController(withIdentifier: vcName)
+    }
 }
 
 extension UIApplication {
