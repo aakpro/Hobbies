@@ -11,6 +11,7 @@ import UIKit
 //The third way
 
 class DetailViewController: UIViewController {
+    let headerHeight:CGFloat = 40
 
     private var viewModel: DetailViewModel!
     var detailModel: ListDetailModelProtocol! {
@@ -40,6 +41,8 @@ class DetailViewController: UIViewController {
         AddressTableViewCell.registerSelf(inTableView: tableView)
         PhotoTableViewCell.registerSelf(inTableView: tableView)
         BusinessHourTableViewCell.registerSelf(inTableView: tableView)
+        self.tableView.backgroundColor = .groupTableViewBackground
+        
     }
 }
 
@@ -94,14 +97,22 @@ extension DetailViewController: UITableViewDataSource
         }
         fatalError("couldn't dequeue any cell in detail view controller")
     }
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 120))
-        view.backgroundColor = .lightGray
-        return view
-    }
+    
 }
 
 extension DetailViewController: UITableViewDelegate
 {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: headerHeight))
+        let label = UILabel(frame: CGRect(x: 8, y: 0, width: self.view.frame.width, height: headerHeight))
+        label.text = self.viewModel.titleForHeader(section: section)
+        headerView.addSubview(label)
+        headerView.backgroundColor = .groupTableViewBackground
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return headerHeight
+    }
     
 }

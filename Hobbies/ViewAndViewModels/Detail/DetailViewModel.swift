@@ -80,6 +80,26 @@ class DetailViewModel: NSObject
     }
     var detailToListModel = DetailToListModel.empty
 
+    func titleForHeader(section: Int) -> String {
+        guard let item = self.item(at: IndexPath(item: 0, section: section)) else { return "" }
+        switch item {
+            
+        case .photo(_):
+            return "Photo"
+        case .titleAndDesc(_):
+            return "Title And Description"
+        case .contactInformation(_):
+            return "Contact Information"
+        case .addresses(_):
+            return "Addresses"
+        case .businessHours(_):
+            return "Business Hours"
+        @unknown default:
+            return ""
+        }
+        return ""
+    }
+    
     func numberOfSections() -> Int {
         return detailToListModel.sections.count
     }
