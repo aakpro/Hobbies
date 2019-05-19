@@ -38,7 +38,8 @@ struct DetailToListModel
     
     struct ContactInformation
     {
-        let items: ContactInfoModel
+        let name: ContactInfoTypes
+        let value: String
     }
     
     struct Addresses
@@ -48,7 +49,9 @@ struct DetailToListModel
     
     struct BusinessHours
     {
-        let items: BusinessHourModel
+        let day: String
+        let from: String
+        let to : String
     }
     
     var sections: [Section]
@@ -110,7 +113,7 @@ class DetailViewModel: NSObject
         
         if let contacts = detailModelProtocol.contactInfo {
             let items = contacts.map { (contact) -> DetailToListModel.Item in
-                return DetailToListModel.Item.contactInformation(DetailToListModel.ContactInformation(items: contacts))
+                return DetailToListModel.Item.contactInformation(DetailToListModel.ContactInformation(name: ContactInfoTypes(rawValue: contact.key) ?? ContactInfoTypes.email, value: contact.value.first ?? ""))
             }
             let section = DetailToListModel.Section(items: items)
             
@@ -128,7 +131,8 @@ class DetailViewModel: NSObject
         
         if let businessHours = detailModelProtocol.businessHours {
             let items = businessHours.map { (businessHour) -> DetailToListModel.Item in
-                return DetailToListModel.Item.businessHours(DetailToListModel.BusinessHours(items: businessHours))
+                let key = businessHour.key
+                return DetailToListModel.Item.businessHours(DetailToListModel.BusinessHours(day: key, from: businessHour.value["from"] ?? "", to: businessHour.value["to"] ?? ""))
             }
             let section = DetailToListModel.Section(items: items)
             responseModel.sections.append(section)

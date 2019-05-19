@@ -13,6 +13,7 @@ enum ContactInfoTypes: String
     case website = "website"
     case email = "email"
     case phoneNumber = "phoneNumber"
+    case unknown = "unknown"
 }
 
 typealias ContactInfoModel = Dictionary<String,Array<String>>

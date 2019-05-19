@@ -17,6 +17,7 @@ class DetailViewController: UIViewController {
         didSet{
             self.viewModel = DetailViewModel(viewController: self)
             self.viewModel.detailObject = self.detailModel
+            self.title = self.detailModel.title
         }
     }
     
@@ -35,6 +36,10 @@ class DetailViewController: UIViewController {
         self.tableView.delegate = self
         self.removeTableViewExtraEmptyCells(tableView: self.tableView)
         TitleAndDescTableViewCell.registerSelf(inTableView: self.tableView)
+        ContactInformationTableViewCell.registerSelf(inTableView: tableView)
+        AddressTableViewCell.registerSelf(inTableView: tableView)
+        PhotoTableViewCell.registerSelf(inTableView: tableView)
+        BusinessHourTableViewCell.registerSelf(inTableView: tableView)
     }
 }
 
@@ -58,13 +63,29 @@ extension DetailViewController: UITableViewDataSource
                     return cell
                 }
                 
-            case .photo(let photo): break
+            case .photo(let photo):
+                if let cell = tableView.dequeueReusableCell(withIdentifier: PhotoTableViewCell.reusableIdentifier, for: indexPath) as? PhotoTableViewCell{
+                    cell.imageURL = photo.urlString
+                    return cell
+                }
                 
-            case .contactInformation(let contact): break
+            case .contactInformation(let contact):
+                if let cell = tableView.dequeueReusableCell(withIdentifier: ContactInformationTableViewCell.reusableIdentifier, for: indexPath) as? ContactInformationTableViewCell {
+                    cell.contactInfo = contact
+                    return cell
+                }
                 
-            case .addresses(let address): break
+            case .addresses(let address):
+                if let cell = tableView.dequeueReusableCell(withIdentifier: AddressTableViewCell.reusableIdentifier, for: indexPath) as? AddressTableViewCell{
+                    cell.address = address.items[indexPath.row]
+                    return cell
+                }
                 
-            case .businessHours(let businessHour): break
+            case .businessHours(let businessHour):
+                if let cell = tableView.dequeueReusableCell(withIdentifier: BusinessHourTableViewCell.reusableIdentifier, for: indexPath) as? BusinessHourTableViewCell {
+                    cell.hour = businessHour
+                    return cell
+                }
                 
             }
         }
@@ -72,6 +93,11 @@ extension DetailViewController: UITableViewDataSource
             return cell
         }
         fatalError("couldn't dequeue any cell in detail view controller")
+    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 120))
+        view.backgroundColor = .lightGray
+        return view
     }
 }
 
