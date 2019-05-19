@@ -44,7 +44,7 @@ struct DetailToListModel
     
     struct Addresses
     {
-        let items: [AddressModel]
+        let address: AddressModel
     }
     
     struct BusinessHours
@@ -122,7 +122,7 @@ class DetailViewModel: NSObject
         
         if let addresses = detailModelProtocol.addresses {
             let items = addresses.map { (address) -> DetailToListModel.Item in
-                return DetailToListModel.Item.addresses(DetailToListModel.Addresses(items: addresses))
+                return DetailToListModel.Item.addresses(DetailToListModel.Addresses(address: address))
             }
             let section = DetailToListModel.Section(items: items)
             

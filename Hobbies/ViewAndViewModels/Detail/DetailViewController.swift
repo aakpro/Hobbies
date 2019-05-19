@@ -77,7 +77,7 @@ extension DetailViewController: UITableViewDataSource
                 
             case .addresses(let address):
                 if let cell = tableView.dequeueReusableCell(withIdentifier: AddressTableViewCell.reusableIdentifier, for: indexPath) as? AddressTableViewCell{
-                    cell.address = address.items[indexPath.row]
+                    cell.address = address.address
                     return cell
                 }
                 
