@@ -8,14 +8,14 @@
 
 import ObjectMapper
 
-class VacationModel: BaseModel, ListModelProtocol
+class VacationModel: BaseModel, ListModelProtocol, ListDetailModelProtocol
 {
   
     //MARK: - ListDetailModelProtocol
     var photo: String?
     var addresses: [AddressModel]?
     var businessHours: [BusinessHourModel]?
-    var contactInfo: [String]?
+    var contactInfo: [ContactInfoModel]?
     
     //MARK: - ListModelProtocol
     var id: String?

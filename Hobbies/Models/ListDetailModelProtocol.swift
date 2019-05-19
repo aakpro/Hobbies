@@ -13,5 +13,5 @@ protocol ListDetailModelProtocol: ListModelProtocol
     var photo: String? { get set }
     var addresses: [AddressModel]? { get set }
     var businessHours: [BusinessHourModel]? { get set }
-    var contactInfo: [String]? { get set }
+    var contactInfo: [ContactInfoModel]? { get set }
 }
