@@ -10,14 +10,10 @@ import ObjectMapper
 
 public class CategoryServices: BaseNetworkingServices
 {
-    enum endpoints: String {
-        case categories = "categories.json"
-    }
-    
     func getAllCategories(completionHandler: @escaping (_ result: Array<CategoryModel>?, AppError?) -> Void)
     {
         
-        self.request(endpoint: endpoints.categories.rawValue, method: .get) { [weak self] (result) in
+        self.request(endpoint: Endpoints.categories.rawValue, method: .get) { [weak self] (result) in
             switch result{
             case .success(let cateogryObjects):
                 
@@ -38,20 +34,5 @@ public class CategoryServices: BaseNetworkingServices
                 return
             }
         }
-    }
-}
-
-extension CategoryServices
-{
-    func convert(categoryObjects objects: Any) -> Array<CategoryModel>?
-    {
-        guard let categoryArray = objects as? Array<Dictionary<String, Any>> else { return nil }
-        var categories = Array<CategoryModel>()
-        for categoryObject in categoryArray {
-            if let newCategory = CategoryModel(JSON: categoryObject) {
-                categories.append(newCategory)
-            }
-        }
-        return categories
     }
 }

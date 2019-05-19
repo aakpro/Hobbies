@@ -1,25 +1,22 @@
 //
-//  CategoryModel.swift
+//  VacationModel.swift
 //  Hobbies
 //
-//  Created by Amir Abbas Kashani on 5/18/19.
+//  Created by Amir Abbas Kashani on 5/19/19.
 //  Copyright © 2019 companyA. All rights reserved.
 //
 
 import ObjectMapper
 
-public class CategoryModel: BaseModel, ListModelProtocol
+class VacationModel: BaseModel, ListModelProtocol
 {
     var type: HobbiesTypes? {
         get {
-            if self.slug == "restaurants" { return .restaurants }
-            if self.slug == "vacation-spots" { return .vacations }
-            return .categories
+            return .vacations
         }
     }
     
     var id: String?
-    var slug: String?
     var updatedAt: Date?
     var title: String?
     var description: String?
@@ -40,7 +37,6 @@ public class CategoryModel: BaseModel, ListModelProtocol
         updatedAt          <- (map["updated_at"], CustomDateFormatTransform(formatString: "yyyy-MM-dd'T'HH:mm:ss.SSSXXXXX"))
         description        <- map["description"]
         active             <- map["_active"]
-        slug               <- map["slug"]
         createdAt          <- (map["created_at"], CustomDateFormatTransform(formatString: "yyyy-MM-dd'T'HH:mm:ss.SSSXXXXX"))
     }
 }

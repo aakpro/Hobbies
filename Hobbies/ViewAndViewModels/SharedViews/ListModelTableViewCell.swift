@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CategoryTableViewCell: UITableViewCell
+class ListModelTableViewCell: UITableViewCell
 {
 
     @IBOutlet weak var dateLabel: UILabel!
@@ -22,12 +22,12 @@ class CategoryTableViewCell: UITableViewCell
         super.awakeFromNib()
     }
     
-    var category: CategoryModel! {
+    var listModel: ListModelProtocol! {
         didSet
         {
-            nameLabel.text = category.title
-            descriptionLabel.text = category.description
-            if let dateText = category.createdAt?.convert(toStyle: .full) {
+            nameLabel.text = listModel.title
+            descriptionLabel.text = listModel.description
+            if let dateText = listModel.createdAt?.convert(toStyle: .full) {
                 dateLabel.text = "created at: \(dateText)"
             }
         }

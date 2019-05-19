@@ -12,8 +12,8 @@ import Foundation
 
 public class BaseNetworkingServices: NSObject
 {
-    enum endpoints: String {
-        case a = ""
+    enum Endpoints: String {
+        case categories = "categories.json"
     }
 
     internal var baseURL = "https://raw.githubusercontent.com/AmirDaliri/getTestJson/master/"

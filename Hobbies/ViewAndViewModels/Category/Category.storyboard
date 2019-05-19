@@ -35,11 +35,20 @@
                     <navigationItem key="navigationItem" id="wxy-bO-OIo"/>
                     <connections>
                         <outlet property="tableView" destination="M05-1y-UH3" id="FLb-20-LLR"/>
+                        <segue destination="fof-Wd-aDS" kind="show" identifier="categoryToList" id="mAn-wY-7md"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FPi-v2-48i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="99.776785714285708"/>
+        </scene>
+        <!--ListAndDetail-->
+        <scene sceneID="NKK-pG-Qsm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ListAndDetail" id="fof-Wd-aDS" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nw1-PA-MrS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1941" y="100"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Iwh-Zp-hWC">
