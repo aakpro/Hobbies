@@ -12,5 +12,6 @@ struct AppConstants
 {
     struct segueIds {
         static let categoryToList = "categoryToList"
+        static let listToDetail = "listToDetail"
     }
 }

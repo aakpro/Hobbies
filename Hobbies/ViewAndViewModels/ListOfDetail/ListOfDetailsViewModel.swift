@@ -9,7 +9,7 @@
 import UIKit
 import RxSwift
 
-class ListAndDetailViewModel: NSObject
+class ListOfDetailsViewModel: NSObject
 {
     public let loading: PublishSubject<Bool> = PublishSubject()
     private var viewController: ListViewController

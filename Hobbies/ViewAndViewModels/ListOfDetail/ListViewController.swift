@@ -14,11 +14,11 @@ import RxCocoa
 
 class ListViewController: UIViewController
 {
-    private var viewModel: ListAndDetailViewModel!
+    private var viewModel: ListOfDetailsViewModel!
     var listData = Array<ListModelProtocol>()
     var hobbieType: HobbiesTypes!{
         didSet {
-            self.viewModel = ListAndDetailViewModel(viewController: self)
+            self.viewModel = ListOfDetailsViewModel(viewController: self)
             self.viewModel.type = self.hobbieType
         }
     }
@@ -43,6 +43,15 @@ class ListViewController: UIViewController
         super.viewDidLoad()
         setupTableView()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let viewController = segue.destination as? DetailViewController,
+            let listModel = sender as? ListModelProtocol,
+            let detailModel = listModel as? ListDetailModelProtocol{
+            viewController.detailModel = detailModel
+        }
+
+    }
 }
 
 extension ListViewController: UITableViewDataSource
@@ -64,4 +73,9 @@ extension ListViewController: UITableViewDataSource
 }
 extension ListViewController: UITableViewDelegate
 {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let listModel = self.listData[indexPath.row]
+        self.performSegue(withIdentifier: AppConstants.segueIds.listToDetail, sender: listModel)
+        self.tableView.deselectRow(at: indexPath, animated: true)
+    }
 }

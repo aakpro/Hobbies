@@ -8,20 +8,30 @@
 
 import ObjectMapper
 
-class VacationModel: BaseModel, ListModelProtocol
+class VacationModel: BaseModel, ListModelProtocol, ListDetailModelProtocol
 {
+    
+  
+    //MARK: - ListDetailModelProtocol
+    var photo: String?
+    var addresses: [AddressModel]?
+    var businessHours: BusinessHourModel?
+    var contactInfo:  ContactInfoModel?
+    
+    //MARK: - ListModelProtocol
+    var id: String?
+    var title: String?
+    var description: String?
+    var createdAt: Date?
     var type: HobbiesTypes? {
         get {
-            return .vacations
+            return .restaurants
         }
     }
     
-    var id: String?
+    //MARK: - BaseModel
     var updatedAt: Date?
-    var title: String?
-    var description: String?
     var active: Bool?
-    var createdAt: Date?
     
     public required init?(map: Map)
     {
@@ -38,5 +48,9 @@ class VacationModel: BaseModel, ListModelProtocol
         description        <- map["description"]
         active             <- map["_active"]
         createdAt          <- (map["created_at"], CustomDateFormatTransform(formatString: "yyyy-MM-dd'T'HH:mm:ss.SSSXXXXX"))
+        photo              <- map ["photo"]
+        addresses          <- map ["addresses"]
+        contactInfo        <- map ["contactInfo"]
+        businessHours      <- map ["bizHours"]
     }
 }

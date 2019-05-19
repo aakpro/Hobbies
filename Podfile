@@ -11,7 +11,7 @@ def sharedPods
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'SwiftRichString'
-
+  pod 'Kingfisher'
 end
 
 
