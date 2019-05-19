@@ -14,11 +14,11 @@ import RxCocoa
 
 class ListViewController: UIViewController
 {
-    private var viewModel: ListAndDetailViewModel!
+    private var viewModel: ListOfDetailsViewModel!
     var listData = Array<ListModelProtocol>()
     var hobbieType: HobbiesTypes!{
         didSet {
-            self.viewModel = ListAndDetailViewModel(viewController: self)
+            self.viewModel = ListOfDetailsViewModel(viewController: self)
             self.viewModel.type = self.hobbieType
         }
     }
